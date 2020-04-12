@@ -8,5 +8,10 @@ namespace Inequality
 {
     class Bracket
     {
+        public int firstMember;
+        public int lastMember;
+        public int priority;
+        public Sign sign;
+        public List<Member> membersInBracket;
     }
 }
