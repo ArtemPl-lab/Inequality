@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    enum Sign
+    public enum Sign
     {
-        PLUS, MINUS
+        PLUS, MINUS, NONE
     }
 }

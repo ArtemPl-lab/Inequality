@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    enum Opeeration
+    public enum Opeeration
     {
         MULTIPLY, DIVISION, POW
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    class Variable : Number
+    public class Variable : Number
     {
         public int degree_var = 1;
         public List<char> variable = new List<char>();

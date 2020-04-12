@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    class Member : Variable
+    public class Member : Variable
     {
         public int priority = 0;
         public Member(string str)

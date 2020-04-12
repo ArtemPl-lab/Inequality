@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    struct Action
+    public struct Action
     {
         public Opeeration opeeration;
         public int degree;
@@ -20,7 +20,7 @@ namespace Inequality
             secondMember = s;
         }
     }
-    class Expression
+    public class Expression
     {
         public List<Member> exp;
         public List<Action> opeerations;

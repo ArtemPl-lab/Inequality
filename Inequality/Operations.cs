@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    static class Operations
+    public static class Operations
     {
         public static Member Multiply(Member m1, Member m2)
         {

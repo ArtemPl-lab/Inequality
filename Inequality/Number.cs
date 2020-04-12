@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    class Number
+    public class Number
     {
         public Sign sign;
         public uint digit;

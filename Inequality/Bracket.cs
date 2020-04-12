@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
-    class Bracket
+    public class Bracket
     {
         public int firstMember;
         public int lastMember;
