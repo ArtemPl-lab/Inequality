@@ -10,16 +10,28 @@ namespace Inequality
     {
         public unsafe static int ParseDegree(string str, int* i)
         {
-            if(str[*i] == '^')
+            if (*i < str.Length)
             {
-                *i += 1;
-                return ParseDigit(str,i);
+                if (str[*i] == '^')
+                {
+                    *i += 1;
+                    if (str[*i] == '-')
+                    {
+                        *i += 1;
+                        return ParseDigit(str, i) * (-1);
+                    }
+                    else
+                        return ParseDigit(str, i);
+                }
+                else
+                {
+                    return 1;
+                }
             }
             else
             {
                 return 1;
             }
-                
         }
         public unsafe static int ParseDigit(string str, int* i)
         {
@@ -57,9 +69,12 @@ namespace Inequality
         public unsafe static List<char> ParseVar(string str, int* i)
         {
             List<char> v = new List<char>();
-            /*
-             Parse code
-             */
+            char c;
+            for(;*i < str.Length && char.IsLetter(str[*i]); *i+=1)
+            {
+                c = str[*i];
+                v.Add(c);
+            }
             return v;
         }
     }

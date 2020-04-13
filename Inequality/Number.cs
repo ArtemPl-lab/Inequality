@@ -14,7 +14,7 @@ namespace Inequality
 
         public Number(string str)
         {
-
+            ParseNumber(str);
         }
         public Number()
         {
@@ -22,19 +22,18 @@ namespace Inequality
         }
         public void SignReverse()
         {
-            /*
-               Reverse code
-            */
+            sign = (Sign.PLUS == sign) ? Sign.MINUS : Sign.PLUS;
         }
         public int Abs()
         {
             return Convert.ToInt32(digit);
         }
-        protected void ParseNumber(string str)
+        private unsafe void ParseNumber(string str)
         {
-            /*
-               Parse code
-            */
+            int i = 0;
+            sign = Parser.ParseSign(str, &i);
+            digit = Convert.ToUInt32(Parser.ParseDigit(str, &i));
+            degree_num = Parser.ParseDegree(str, &i);
         }
     }
 }

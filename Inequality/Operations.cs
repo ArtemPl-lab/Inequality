@@ -6,6 +6,20 @@ using System.Threading.Tasks;
 
 namespace Inequality
 {
+    public struct Action
+    {
+        public Opeeration opeeration;
+        public int degree;
+        public int firstMember;
+        public int secondMember;
+        public Action(Opeeration o, int f, int s, int d = 1)
+        {
+            opeeration = o;
+            degree = d;
+            firstMember = f;
+            secondMember = s;
+        }
+    }
     public static class Operations
     {
         public static Member Multiply(Member m1, Member m2)

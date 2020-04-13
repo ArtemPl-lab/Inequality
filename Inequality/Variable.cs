@@ -12,15 +12,20 @@ namespace Inequality
         public List<char> variable = new List<char>();
         public Variable(string str)
         {
-
+            ParseVar(str);
         }
         public Variable()
         {
 
         }
-        public void ParseVar(string str)
+        public unsafe void ParseVar(string str)
         {
-
+            int i = 0;
+            sign = Parser.ParseSign(str, &i);
+            digit = Convert.ToUInt32(Parser.ParseDigit(str, &i));
+            degree_num = Parser.ParseDegree(str, &i);
+            variable = Parser.ParseVar(str, &i);
+            degree_var = Parser.ParseDegree(str, &i);
         }
     }
 }
